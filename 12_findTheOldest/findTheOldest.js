@@ -14,7 +14,14 @@ const findTheOldest = function (people) {
         }
     }, {});
 
-    return oldest;
+    let result = {};
+    people.forEach(person => {
+        if (person.name === oldest.name) {
+            result = person;
+        }
+    });
+
+    return result;
 };
 
 // Do not edit below this line
